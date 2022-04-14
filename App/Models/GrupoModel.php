@@ -8,7 +8,7 @@ class GrupoModel extends BaseModel
 
     function __construct($id, $codigo, $nome, $ativo)
     {
-        parent::__construct($id, $codigo, $nome);
+        //parent::__construct($id, $codigo, $nome);
         
         $this->setAtivo($ativo);
     }

@@ -39,9 +39,9 @@ class PedidoController
         {
             foreach($data as $item)
             {
-                // $pedido = $pedidoDAO->ObterPorNumPedido($item->numPedido);
-                // if ($pedido != null)
-                //     $model->id = $pedido->id;
+                $pedido = $pedidoDAO->ObterPorNumPedido($item->numPedido);
+                if ($pedido != null)
+                    $model->id = $pedido->id;
 
                 $model->numPedido = $item->numPedido;
                 $model->nomeCliente = $item->nomeCliente;

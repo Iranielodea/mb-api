@@ -55,7 +55,6 @@ final class GrupoController
     public function insertGrupo(Request $request, Response $response, array $args)
     {
         $data = json_decode($request->getBody());
-
         $grupoDAO = new GrupoDAO();
         
         $retorno = array("mensagem" => "OK");
@@ -76,6 +75,9 @@ final class GrupoController
                     $model->setNome($item->nome);
                     $model->setAtivo($item->ativo);
                 }
+
+                
+
                 $grupoDAO->salvar($model);
             }
         }
